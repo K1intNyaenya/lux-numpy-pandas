@@ -31,3 +31,24 @@ cylinders = df['cylinders']
 # print(df.loc[1:4])  # rows 1 to 4 (inclusive)
 # print(df.loc[1:4])  # rows 1 to 4 (inclusive)
 # print(df.loc[1:3])  # rows 1 to 3 (inclusive)
+
+
+## Logical operators in pandas
+# selecting rows based on a condition
+# print(df[df['mpg'] > 18]) # rows where mpg is greater than 18
+
+#print(df[(df['mpg'] > 18) & (df['cylinders'] == 4)]) # rows where mpg is greater than 18 and cylinders is equal to 4
+
+#print(df[(df['mpg'] > 18) | (df['cylinders'] == 4)]) # rows where mpg is greater than 18 or cylinders is equal to 4
+
+# using contains
+# print(df[df['car name'].str.contains('ford')]) # rows where car name contains 'ford'
+
+# checking total number of chevrolet cars in the dataset
+# print(df[df['car name'].str.contains('chevrolet')].shape[0])
+
+# Filter the dataset to show vehicles with hp greater than 50 and print out the car names
+
+
+# sorting by horsepower
+print(df.sort_values('horsepower', ascending=True)) # sort by horsepower in ascending order
